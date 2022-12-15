@@ -1,0 +1,47 @@
+<%- include("_header") -%>
+
+  <h2> Create New Customer</h2>
+
+  <form>
+    <table>
+      <tr>
+        <td><label for="cusId">ID</label>:</td>
+        <td><input type="number" name="cusid" id="cusid" type="number" required /></td>
+        <td>(Required)</td>
+      </tr>
+      <tr>
+        <td><label for="cusfname">First Name</label>:</td>
+        <td><input type="text" name="cusfname" id="cusfname" required /></td>
+        <td>(Required)</td>
+      </tr>
+      <tr>
+        <td><label for="cuslname">Last Name</label>:</td>
+        <td><input type="text" name="cuslname" id="cuslname" required /></td>
+        <td>(Required)</td>
+      </tr>
+      <tr>
+        <td><label for="cusstate">State</label>:</td>
+        <td><input type="text" name="cusstate" id="cusstate" minlength=2 maxlength=2 required/></td>
+      </tr>
+      <tr>
+        <td><label for="cussalesytd">Sales YTD</label>:</td>
+        <td><input type="text" name="cussalesytd" id="cussalesytd" /></td>
+      </tr>
+      <tr>
+        <td><label for="cussalesprev">Previous Years Sales</label>:</td>
+        <td><input type="text" name="cussalesprev" id="cussalesprev" /></td>
+      </tr>
+      <tr>
+        <td span="2">
+          <input type="submit" value="Create" class="btn btn-primary" />
+          <input type="reset" value="Reset" class="btn btn-primary" />
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <div id="output"></div>
+
+  <script src="createcustomer.js"></script>
+
+  <%- include("_footer") -%>

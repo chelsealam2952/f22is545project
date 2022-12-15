@@ -1,0 +1,58 @@
+<%- include("_header") -%>
+
+  <h2> Edit Customer</h2>
+
+  <form method="POST">
+    <table>
+      <tr>
+        <td><label for="cusId">ID</label>:</td>
+        <td><input type="number" name="cusid" id="cusid" type="number" value="<%= model.cusid %>"
+            readonly disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td><label for="cusfname">First Name</label>:</td>
+        <td><input type="text" name="cusfname" id="cusfname" value="<%= model.cusfname %>" readonly
+            disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td><label for="cuslname">Last Name</label>:</td>
+        <td><input type="text" name="cuslname" id="cuslname" value="<%= model.cuslname %>" readonly
+            disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td><label for="cusstate">State</label>:</td>
+        <td><input type="text" name="cusstate" id="cusstate" value="<%= model.cusstate %>" readonly
+            disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td><label for="cussalesytd">Sales YTD</label>:</td>
+        <td><input type="text" name="cussalesytd" id="cussalesytd" value="<%= model.cussalesytd %>" readonly
+            disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td><label for="cussalesprev">Previous Years Sales</label>:</td>
+        <td><input type="text" name="cussalesprev" id="cussalesprev" value="<%= model.cussalesprev %>" readonly
+            disabled="disabled" /></td>
+      </tr>
+      <tr>
+        <td span="2">
+          <input type="submit" value="Delete Customer" class="btn btn-danger" />
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <div id="output"></div>
+
+
+
+  <% if (type==="post" ) { %>
+    <% if (msg==="success" ) { %>
+      <h3>Customer Deleted Successfully!</h3>
+      <% } else { %>
+        <h3>Error! <%= msg %>
+        </h3>
+        <% } %>
+          <% } %>
+
+            <%- include("_footer") -%>

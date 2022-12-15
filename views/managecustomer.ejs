@@ -1,0 +1,54 @@
+<%- include("_header") -%>
+
+  <h2> Find Customers</h2>
+
+  <h4>Total number of records in the database: <%= totRecs %>
+  </h4>
+
+  <form>
+    <table>
+      <tr>
+        <td><label for="cusid">ID</label>:</td>
+        <td><input type="text" name="cusid" id="cusid" type="number" /></td>
+        <td>(equal)</td>
+      </tr>
+      <tr>
+        <td><label for="cusfname">First Name</label>:</td>
+        <td><input type="text" name="cusfname" id="cusfname" /></td>
+        <td>(begins with)</td>
+      </tr>
+      <tr>
+        <td><label for="cuslname">Last Name</label>:</td>
+        <td><input type="text" name="cuslname" id="cuslname" /></td>
+        <td>(begins with)</td>
+      </tr>
+      <tr>
+        <td><label for="cusstate">State</label>:</td>
+        <td><input type="cusstate" name="cusstate" id="cusstate" minlength="2" maxlength="2" /></td>
+        <td>(equal)</td>
+      </tr>
+      <tr>
+        <tr>
+          <td><label for="cussalesytd">Sales YTD</label>:</td>
+          <td><input type="text" name="cussalesytd" id="cussalesytd" /></td>
+          <td>(greater than or equal)</td>
+      </tr>
+      <tr>
+          <td><label for="cussalesprev">Previous Years Sales</label>:</td>
+          <td><input type="text" name="cussalesprev" id="cussalesprev" ></td>
+          <td>(greater than or equal)</td>
+      </tr>
+      <tr>
+          <td span="2">
+              <input type="submit" value="Find" class="btn btn-primary"/>
+              <input type="reset" value="Reset" class="btn btn-primary"/>
+          </td>
+      </tr>
+  </table>
+</form>
+
+<div id="output"></div>
+
+<script src="managecustomer.js"></script>
+
+<%- include("_footer") -%>   
